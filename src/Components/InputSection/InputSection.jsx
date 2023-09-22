@@ -1,10 +1,17 @@
 import React from "react";
-
+import "./InputSection.css";
 function InputSection({ changeDataHandler, addButtonHandler, dataSet }) {
   return (
-    <div>
-      <input type="text" onChange={changeDataHandler} value={dataSet}/>
-      <button onClick={addButtonHandler}>Add</button>
+    <div className="input-section-container">
+      <input
+        type="text"
+        onChange={changeDataHandler}
+        value={dataSet}
+        className="input-section"
+      />
+      <button onClick={addButtonHandler} className="add-todo-btn">
+        Add Todo
+      </button>
     </div>
   );
 }
